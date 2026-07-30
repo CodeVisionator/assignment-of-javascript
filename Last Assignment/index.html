@@ -1,9 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Last Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="container">
+
+        <h1>📚 Library Management System</h1>
+
+        <div id="message"></div>
+
+        <form id="bookForm">
+
+            <input type="hidden" id="editIndex">
+
+            <div class="input-group">
+                <input type="text" id="title" placeholder="Book Title">
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="author" placeholder="Author Name">
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="category" placeholder="Category">
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="isbn" placeholder="ISBN Number">
+            </div>
+
+            <div class="input-group">
+                <input type="number" id="year" placeholder="Publication Year">
+            </div>
+
+            <div class="input-group">
+                <select id="status">
+                    <option value="">Select Status</option>
+                    <option value="Available">Available</option>
+                    <option value="Issued">Issued</option>
+                </select>
+            </div>
+
+            <button type="submit" id="saveBtn">
+                Add Book
+            </button>
+
+        </form>
+
+        <div class="top-bar">
+
+            <input type="text" id="searchBook" placeholder="Search Book">
+
+            <select id="filterCategory">
+                <option value="All">All Categories</option>
+            </select>
+
+            <button id="sortBtn">
+                Sort A-Z
+            </button>
+
+            <button id="darkMode">
+                🌙
+            </button>
+
+        </div>
+
+        <h3>Total Books :
+            <span id="totalBooks">0</span>
+        </h3>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>ISBN</th>
+                    <th>Year</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="bookTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+<script src="app.js"></script>
 
 </body>
 </html>
